@@ -8,110 +8,110 @@
 
     <Button
         android:id="@+id/btn1"
-        android:layout_width="wrap_content"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/btn4"
         android:layout_margin="1dp"
-        android:layout_above="@id/btn4"
+        android:background="@drawable/shapes"
         android:text="1"
-        android:textColor="#ffffff"
-        android:background="@drawable/shapes"/>
+        android:textColor="#ffffff" />
 
     <Button
         android:id="@+id/btn2"
-        android:layout_width="wrap_content"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/btn5"
         android:layout_margin="1dp"
-        android:layout_above="@id/btn5"
+        android:layout_toRightOf="@+id/btn1"
+        android:background="@drawable/shapes"
         android:text="2"
-        android:textColor="#ffffff"
-        android:layout_toRightOf="@id/btn1"
-        android:background="@drawable/shapes"/>
+        android:textColor="#ffffff" />
 
     <Button
         android:id="@+id/btn3"
-        android:layout_width="wrap_content"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:text="3"
+        android:layout_above="@+id/btn6"
         android:layout_margin="1dp"
-        android:layout_above="@id/btn6"
-        android:textColor="#ffffff"
-        android:layout_toRightOf="@id/btn2"
-        android:background="@drawable/shapes"/>
+        android:layout_toRightOf="@+id/btn2"
+        android:background="@drawable/shapes"
+        android:text="3"
+        android:textColor="#ffffff" />
 
     <Button
         android:id="@+id/btn4"
-        android:layout_width="wrap_content"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/btn9"
         android:layout_margin="1dp"
-        android:layout_above="@id/btn9"
+        android:background="@drawable/shapes"
         android:text="4"
-        android:textColor="#ffffff"
-        android:background="@drawable/shapes"/>
+        android:textColor="#ffffff" />
 
     <Button
         android:id="@+id/btn5"
-        android:layout_width="wrap_content"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/btn9"
         android:layout_margin="1dp"
-        android:layout_above="@id/btn9"
+        android:layout_toRightOf="@+id/btn1"
+        android:background="@drawable/shapes"
         android:text="5"
-        android:textColor="#ffffff"
-        android:layout_toRightOf="@id/btn1"
-        android:background="@drawable/shapes"/>
+        android:textColor="#ffffff" />
 
     <Button
         android:id="@+id/btn6"
-        android:layout_width="wrap_content"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:text="6"
+        android:layout_above="@+id/btn9"
         android:layout_margin="1dp"
-        android:textColor="#ffffff"
-        android:layout_above="@id/btn9"
         android:layout_toRightOf="@id/btn2"
-        android:background="@drawable/shapes"/>
+        android:background="@drawable/shapes"
+        android:text="6"
+        android:textColor="#ffffff" />
 
     <Button
         android:id="@+id/btn7"
-        android:layout_width="wrap_content"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/btn0"
         android:layout_margin="1dp"
+        android:background="@drawable/shapes"
         android:text="7"
-        android:textColor="#ffffff"
-        android:layout_above="@id/btn0"
-        android:background="@drawable/shapes"/>
+        android:textColor="#ffffff" />
 
     <Button
         android:id="@+id/btn8"
-        android:layout_width="wrap_content"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/btn0"
         android:layout_margin="1dp"
+        android:layout_toRightOf="@+id/btn1"
+        android:background="@drawable/shapes"
         android:text="8"
-        android:textColor="#ffffff"
-        android:layout_above="@id/btn0"
-        android:layout_toRightOf="@id/btn1"
-        android:background="@drawable/shapes"/>
+        android:textColor="#ffffff" />
 
     <Button
         android:id="@+id/btn9"
-        android:layout_width="wrap_content"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:text="9"
+        android:layout_above="@+id/btn0"
         android:layout_margin="1dp"
-        android:textColor="#ffffff"
-        android:layout_above="@id/btn0"
-        android:layout_toRightOf="@id/btn2"
-        android:background="@drawable/shapes"/>
+        android:layout_toRightOf="@+id/btn2"
+        android:background="@drawable/shapes"
+        android:text="9"
+        android:textColor="#ffffff" />
 
     <Button
         android:id="@+id/btn0"
-        android:layout_width="wrap_content"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:text="0"
-        android:layout_marginTop="1dp"
-        android:layout_marginRight="1dp"
-        android:layout_marginLeft="1dp"
         android:layout_marginBottom="5dp"
-        android:textColor="#ffffff"
-        android:layout_toLeftOf="@id/btn9"
-        android:background="@drawable/shapes"/>
+        android:layout_marginLeft="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_toLeftOf="@+id/btn9"
+        android:background="@drawable/shapes"
+        android:text="0"
+        android:textColor="#ffffff" />
 </RelativeLayout>
