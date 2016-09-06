@@ -76,37 +76,117 @@ public class FlashCard extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         switch(v.getId()){
             case R.id.btnMinus:
-                btnMinus.setVisibility(View.GONE);
-                btnMinusLight.setVisibility(View.VISIBLE);
+                SetButtonsMinus(false);
                 break;
             case R.id.btnMinusLight:
-                btnMinus.setVisibility(View.VISIBLE);
-                btnMinusLight.setVisibility(View.GONE);
+                SetButtonsMinus(true);
                 break;
             case R.id.btnPlus:
-                btnAdd.setVisibility(View.GONE);
-                btnAddLight.setVisibility(View.VISIBLE);
+                SetButtonsAdd(false);
                 break;
             case R.id.btnPlusLight:
-                btnAdd.setVisibility(View.VISIBLE);
-                btnAddLight.setVisibility(View.GONE);
+                SetButtonsAdd(true);
                 break;
             case R.id.btnMultiplication:
-                btnMultiply.setVisibility(View.GONE);
-                btnMultiplyLight.setVisibility(View.VISIBLE);
+                SetButtonsMultiply(false);
                 break;
             case R.id.btnMultiplicationLight:
-                btnMultiply.setVisibility(View.VISIBLE);
-                btnMultiplyLight.setVisibility(View.GONE);
+                SetButtonsMultiply(true);
                 break;
             case R.id.btnDivide:
-                btnDivide.setVisibility(View.GONE);
-                btnDivideLight.setVisibility(View.VISIBLE);
+                SetButtonsDivide(false);
                 break;
             case R.id.btnDivideLight:
-                btnDivide.setVisibility(View.VISIBLE);
-                btnDivideLight.setVisibility(View.GONE);
+               SetButtonsDivide(true);
                 break;
+        }
+    }
+
+    private void SetButtonsMinus(boolean isSelected) {
+        if(isSelected){
+            btnMinus.setVisibility(View.VISIBLE);
+            btnDivide.setVisibility(View.VISIBLE);
+            btnMultiply.setVisibility(View.VISIBLE);
+            btnAdd.setVisibility(View.VISIBLE);
+            btnMinusLight.setVisibility(View.GONE);
+            btnDivideLight.setVisibility(View.GONE);
+            btnMultiplyLight.setVisibility(View.GONE);
+            btnAddLight.setVisibility(View.GONE);
+        }else{
+            btnAdd.setVisibility(View.VISIBLE);
+            btnMinus.setVisibility(View.GONE);
+            btnMultiply.setVisibility(View.VISIBLE);
+            btnDivide.setVisibility(View.VISIBLE);
+            btnAddLight.setVisibility(View.GONE);
+            btnMinusLight.setVisibility(View.VISIBLE);
+            btnMultiplyLight.setVisibility(View.GONE);
+            btnDivideLight.setVisibility(View.GONE);
+        }
+    }
+
+    private void SetButtonsAdd(boolean isSelected){
+        if(isSelected){
+            btnMinus.setVisibility(View.VISIBLE);
+            btnDivide.setVisibility(View.VISIBLE);
+            btnMultiply.setVisibility(View.VISIBLE);
+            btnAdd.setVisibility(View.VISIBLE);
+            btnMinusLight.setVisibility(View.GONE);
+            btnDivideLight.setVisibility(View.GONE);
+            btnMultiplyLight.setVisibility(View.GONE);
+            btnAddLight.setVisibility(View.GONE);
+        }else{
+            btnAdd.setVisibility(View.GONE);
+            btnMinus.setVisibility(View.VISIBLE);
+            btnMultiply.setVisibility(View.VISIBLE);
+            btnDivide.setVisibility(View.VISIBLE);
+            btnAddLight.setVisibility(View.VISIBLE);
+            btnMinusLight.setVisibility(View.GONE);
+            btnMultiplyLight.setVisibility(View.GONE);
+            btnDivideLight.setVisibility(View.GONE);
+        }
+    }
+
+    private void SetButtonsMultiply(boolean isSelected){
+        if(isSelected){
+            btnMinus.setVisibility(View.VISIBLE);
+            btnDivide.setVisibility(View.VISIBLE);
+            btnMultiply.setVisibility(View.VISIBLE);
+            btnAdd.setVisibility(View.VISIBLE);
+            btnMinusLight.setVisibility(View.GONE);
+            btnDivideLight.setVisibility(View.GONE);
+            btnMultiplyLight.setVisibility(View.GONE);
+            btnAddLight.setVisibility(View.GONE);
+        }else{
+            btnAdd.setVisibility(View.VISIBLE);
+            btnMinus.setVisibility(View.VISIBLE);
+            btnMultiply.setVisibility(View.GONE);
+            btnDivide.setVisibility(View.VISIBLE);
+            btnAddLight.setVisibility(View.GONE);
+            btnMinusLight.setVisibility(View.GONE);
+            btnMultiplyLight.setVisibility(View.VISIBLE);
+            btnDivideLight.setVisibility(View.GONE);
+        }
+    }
+
+    private void SetButtonsDivide(boolean isSelected){
+        if(isSelected){
+            btnMinus.setVisibility(View.VISIBLE);
+            btnDivide.setVisibility(View.VISIBLE);
+            btnMultiply.setVisibility(View.VISIBLE);
+            btnAdd.setVisibility(View.VISIBLE);
+            btnMinusLight.setVisibility(View.GONE);
+            btnDivideLight.setVisibility(View.GONE);
+            btnMultiplyLight.setVisibility(View.GONE);
+            btnAddLight.setVisibility(View.GONE);
+        }else{
+            btnAdd.setVisibility(View.VISIBLE);
+            btnMinus.setVisibility(View.VISIBLE);
+            btnMultiply.setVisibility(View.VISIBLE);
+            btnDivide.setVisibility(View.GONE);
+            btnAddLight.setVisibility(View.GONE);
+            btnMinusLight.setVisibility(View.GONE);
+            btnMultiplyLight.setVisibility(View.GONE);
+            btnDivideLight.setVisibility(View.VISIBLE);
         }
     }
 }
