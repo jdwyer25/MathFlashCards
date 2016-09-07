@@ -128,21 +128,30 @@ public class FlashCard extends Fragment implements View.OnClickListener, ViewFac
                 break;
             case R.id.btnPlus:
                 SetButtonsAdd(false);
+                setImageCards();
+                setFunctionType(R.id.btnPlus);
                 break;
             case R.id.btnPlusLight:
                 SetButtonsAdd(true);
+                clearImages();
                 break;
             case R.id.btnMultiplication:
                 SetButtonsMultiply(false);
+                setImageCards();
+                setFunctionType(R.id.btnMultiplication);
                 break;
             case R.id.btnMultiplicationLight:
                 SetButtonsMultiply(true);
+                clearImages();
                 break;
             case R.id.btnDivide:
                 SetButtonsDivide(false);
+                setImageCards();
+                setFunctionType(R.id.btnDivide);
                 break;
             case R.id.btnDivideLight:
                 SetButtonsDivide(true);
+                clearImages();
                 break;
         }
     }
