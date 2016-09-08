@@ -55,4 +55,36 @@ public class DrawableHelper {
         }
     }
 
+    public static int getCardValue(int card) {
+        switch (card) {
+            case R.drawable.card_zero:
+                return 0;
+            case R.drawable.card_one:
+                return 1;
+            case R.drawable.card_two:
+                return 2;
+            case R.drawable.card_three:
+                return 3;
+            case R.drawable.card_four:
+                return 4;
+            case R.drawable.card_five:
+                return 5;
+            case R.drawable.card_six:
+                return 6;
+            case R.drawable.card_seven:
+                return 7;
+            case R.drawable.card_eight:
+                return 8;
+            case R.drawable.card_nine:
+                return 9;
+            case R.drawable.card_ten:
+                return 10;
+            case R.drawable.card_eleven:
+                return 11;
+            case R.drawable.card_twelve:
+                return 12;
+            default:
+                return -1;
+        }
+    }
 }

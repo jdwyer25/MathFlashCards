@@ -11,6 +11,8 @@
     <string name="two">2</string>
     <string name="three">3</string>
     <string name="_0">0</string>
+    <string name="back">Back</string>
+    <string name="clear">Clear</string>
     <string name="your_answer">Your Answer:</string>
     <string name="submit_answer">Submit</string>
 </resources>
