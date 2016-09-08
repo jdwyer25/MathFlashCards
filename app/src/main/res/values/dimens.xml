@@ -5,4 +5,7 @@
     <dimen name="fab_margin">10dp</dimen>
     <dimen name="button_width">80dp</dimen>
     <dimen name="button_width_alt">50dp</dimen>
+    <dimen name="text_height">25sp</dimen>
+    <dimen name="count_icon_height">30dp</dimen>
+    <dimen name="count_icon_width">30dp</dimen>
 </resources>
