@@ -6,22 +6,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <fragment android:name="dwyer.com.mathflashcards.Fragment_StartScreen"
-        android:id="@+id/start_fragment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:layout="@layout/fragment_start_screen" />
-
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
         ads:adSize="BANNER"
         ads:adUnitId="@string/banner_ad_unit_id"
         />
+
+    <fragment android:name="dwyer.com.mathflashcards.Fragment_FlashCard"
+        android:id="@+id/start_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout="@layout/fragment_flash_card" />
 
 </RelativeLayout>

@@ -9,14 +9,14 @@ public class DrawableHelper {
 
     public static int getFunctionType(int id) {
         switch(id){
-            case R.id.btnMinus:
-                return R.drawable.subtract;
-            case R.id.btnPlus:
-                return R.drawable.add;
-            case R.id.btnMultiplication:
-                return R.drawable.multiply1;
-            case R.id.btnDivide:
-                return R.drawable.divide1;
+            case Config.Subtract:
+                return R.drawable.symbol_subtract;
+            case Config.Add:
+                return R.drawable.symbol_plus;
+            case Config.Multiply:
+                return R.drawable.symbol_multiply;
+            case Config.Divide:
+                return R.drawable.symbol_divide;
             default:
                 return -1;
         }

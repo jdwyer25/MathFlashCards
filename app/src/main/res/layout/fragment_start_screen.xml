@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    tools:context=".Fragment_StartScreen">
+
+    <ImageView
+        android:id="@+id/imgTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:src="@drawable/title"
+        android:contentDescription="@string/title_image" />
+
+    <Button
+        android:layout_below="@+id/imgTitle"
+        android:layout_marginTop="@dimen/button_spacing"
+        android:id="@+id/btnAddition"
+        style="@style/button_text"
+        android:layout_width="match_parent"
+        android:background="@drawable/buttons_main_screen_blue"
+        android:layout_height="wrap_content"
+        android:text="@string/addition"
+        />
+
+    <Button
+        android:layout_marginTop="@dimen/button_spacing"
+        android:layout_below="@+id/btnAddition"
+        style="@style/button_text"
+        android:id="@+id/btnSubtraction"
+        android:background="@drawable/buttons_main_screen_red"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="@string/subtraction"/>
+
+    <Button
+        android:layout_marginTop="@dimen/button_spacing"
+        android:layout_below="@+id/btnSubtraction"
+        style="@style/button_text_dark"
+        android:id="@+id/btnMultiplication"
+        android:background="@drawable/buttons_main_screen_yellow"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="@string/multiplication"/>
+
+    <Button
+        android:layout_marginTop="@dimen/button_spacing"
+        android:layout_below="@+id/btnMultiplication"
+        style="@style/button_text_dark"
+        android:id="@+id/btnDivision"
+        android:background="@drawable/buttons_main_screen_green"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="@string/division"/>
+
+</RelativeLayout>
