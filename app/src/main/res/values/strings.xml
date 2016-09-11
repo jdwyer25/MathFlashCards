@@ -15,4 +15,17 @@
     <string name="clear">Clear</string>
     <string name="your_answer">Your Answer:</string>
     <string name="submit_answer">Submit</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="multiplication">Multiplication</string>
+    <string name="subtraction">Subtraction</string>
+    <string name="addition">Addition</string>
+    <string name="division">Division</string>
+    <string name="share">Share</string>
+    <string name="rate_us">Rate Us</string>
+    <string name="title_image">Title Image</string>
+    <string name="practice">Math Practice</string>
+
+    <string name="banner_ad_unit_id">ca-app-pub-0959410565463062/4898361711</string>
 </resources>

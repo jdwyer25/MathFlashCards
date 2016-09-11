@@ -13,8 +13,32 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="button_text">
+        <item name="android:textSize">25sp</item>
+        <item name="android:typeface">serif</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:layout_marginLeft">75dp</item>
+        <item name="android:layout_marginRight">75dp</item>
+    </style>
 
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="button_text_dark">
+        <item name="android:textSize">25sp</item>
+        <item name="android:typeface">serif</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:layout_marginLeft">75dp</item>
+        <item name="android:layout_marginRight">75dp</item>
+    </style>
+
+    <style name="button_text_land">
+        <item name="android:textSize">25sp</item>
+        <item name="android:typeface">serif</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="button_text_dark_land">
+        <item name="android:textSize">25sp</item>
+        <item name="android:typeface">serif</item>
+        <item name="android:textColor">#000000</item>
+    </style>
 
 </resources>

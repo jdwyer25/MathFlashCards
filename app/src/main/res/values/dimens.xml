@@ -8,4 +8,5 @@
     <dimen name="text_height">25sp</dimen>
     <dimen name="count_icon_height">30dp</dimen>
     <dimen name="count_icon_width">30dp</dimen>
+    <dimen name="button_spacing">15dp</dimen>
 </resources>

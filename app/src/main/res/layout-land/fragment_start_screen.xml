@@ -1,0 +1,76 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    tools:context=".Fragment_StartScreen">
+
+    <ImageView
+        android:id="@+id/imgTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/title"
+        android:contentDescription="@string/title_image" />
+
+    <LinearLayout
+        android:id="@+id/llAddSubtract"
+        android:layout_below="@id/imgTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_below="@+id/imgTitle"
+            android:id="@+id/btnAddition"
+            android:layout_marginRight="5dp"
+            style="@style/button_text_land"
+            android:layout_width="300dp"
+            android:background="@drawable/buttons_main_screen_blue"
+            android:layout_height="wrap_content"
+            android:text="@string/addition"
+            />
+
+        <Button
+            style="@style/button_text_land"
+            android:id="@+id/btnSubtraction"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/buttons_main_screen_red"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="@string/subtraction"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llMultiDiv"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/llAddSubtract"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            style="@style/button_text_dark_land"
+            android:id="@+id/btnMultiplication"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/buttons_main_screen_yellow"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="@string/multiplication"/>
+
+        <Button
+            style="@style/button_text_dark_land"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/btnDivision"
+            android:background="@drawable/buttons_main_screen_green"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="@string/division"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
