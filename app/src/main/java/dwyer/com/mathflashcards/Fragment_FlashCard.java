@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageSwitcher;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -16,16 +15,14 @@ import java.util.Random;
 import dwyer.com.mathflashcards.helper.Config;
 import dwyer.com.mathflashcards.helper.DrawableHelper;
 
-import static android.widget.ViewSwitcher.ViewFactory;
-
-public class Fragment_FlashCard extends Fragment implements View.OnClickListener, ViewFactory {
+public class Fragment_FlashCard extends Fragment implements View.OnClickListener {
 
     //region Declare widgets and variables
     protected View v;
     protected Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn0;
     protected Button btnClear, btnBack, btnSubmit;
-    protected TextView txtAnswer, txtRight, txtWrong;
-    protected ImageSwitcher card1, card2, functionType;
+    protected TextView txtAnswer, txtRight, txtWrong, txtNumber1, txtNumber2;
+    protected ImageView imgType;
     protected StringBuilder sb;
     protected int firstCard = -1, secondCard = -1, funcType;
     protected int right = 0;
@@ -45,7 +42,6 @@ public class Fragment_FlashCard extends Fragment implements View.OnClickListener
     @Override
     public void onSaveInstanceState(Bundle outState) {
         if(!txtAnswer.getText().equals("")) currentEntry = txtAnswer.getText().toString();
-
         super.onSaveInstanceState(outState);
     }
 
@@ -69,24 +65,28 @@ public class Fragment_FlashCard extends Fragment implements View.OnClickListener
         //Set the on click listeners for the button widgets
         setOnClickListeners();
 
-        //Set the view factory for the image switcher widgets
-        setViewFactory();
-
+        //Set the math function type
         setFunctionType(funcType);
 
+        //Create a new string builder
         sb = new StringBuilder();
 
+        //check for a current entry
         if(currentEntry != null) {
+            //Set the text view
             txtAnswer.setText(currentEntry);
+
+            //set the string builder to the current entry
             sb.append(currentEntry);
         }
 
+        //Get new cards if there are not any selected
         if(firstCard == -1) {
             setImageCards();
         }
         else{
-            card1.setImageResource(DrawableHelper.getCard(firstCard));
-            card2.setImageResource(DrawableHelper.getCard(secondCard));
+            txtNumber1.setText(String.valueOf(firstCard));
+            txtNumber2.setText(String.valueOf(secondCard));
         }
 
         return v;
@@ -99,13 +99,15 @@ public class Fragment_FlashCard extends Fragment implements View.OnClickListener
         Random r = new Random(time);
 
         //Get a couple of random numbers from 0 to 12
-        firstCard = r.nextInt(12 - 0 + 1) + 0;
-        secondCard = r.nextInt(12 - 0 + 1) + 0;
+        getRandomCardNumbers(r);
 
+        //For subtraction and division make sure the answer will be positive
         switch(funcType){
             case Config.Divide:
-                while(firstCard == 0 || !(firstCard / secondCard >= 0))
-                    firstCard = (r.nextInt(12 - 0 + 1) +0);
+                while(firstCard == 0 || secondCard == 0){
+                    getRandomCardNumbers(r);
+                }
+                firstCard = firstCard * secondCard;
                 break;
             case Config.Subtract:
                 while(!(firstCard - secondCard >= 0))
@@ -113,19 +115,20 @@ public class Fragment_FlashCard extends Fragment implements View.OnClickListener
                 break;
         }
 
-        card1.setImageResource(DrawableHelper.getCard(firstCard));
-        card2.setImageResource(DrawableHelper.getCard(secondCard));
+        //Set the image resource
+        txtNumber1.setText(String.valueOf(firstCard));
+        txtNumber2.setText(String.valueOf(secondCard));
+    }
+
+    private void getRandomCardNumbers(Random r) {
+        firstCard = r.nextInt(12 - 0 + 1) + 0;
+        secondCard = r.nextInt(12 - 0 + 1) + 0;
     }
 
     private void setFunctionType(int id){
-        functionType.setImageResource(DrawableHelper.getFunctionType(id));
+        imgType.setImageResource(DrawableHelper.getFunctionType(id));
     }
 
-    private void setViewFactory() {
-        card1.setFactory(this);
-        functionType.setFactory(this);
-        card2.setFactory(this);
-    }
 
     private void getViews() {
         btn0 = (Button) v.findViewById(R.id.btn0);
@@ -143,13 +146,13 @@ public class Fragment_FlashCard extends Fragment implements View.OnClickListener
         btnClear = (Button) v.findViewById(R.id.btnClear);
         btnSubmit = (Button) v.findViewById(R.id.btnSubmit);
 
-        card1 = (ImageSwitcher) v.findViewById(R.id.isOne);
-        card2 = (ImageSwitcher) v.findViewById(R.id.isThree);
-        functionType = (ImageSwitcher) v.findViewById(R.id.isTwo);
-
         txtAnswer = (TextView) v.findViewById(R.id.txtAnswer);
         txtRight = (TextView) v.findViewById(R.id.txtRight);
         txtWrong = (TextView) v.findViewById(R.id.txtWrong);
+        txtNumber1 = (TextView) v.findViewById(R.id.txtNumber1);
+        txtNumber2 = (TextView) v.findViewById(R.id.txtNumber2);
+
+        imgType = (ImageView) v.findViewById(R.id.imgSymbol);
     }
 
     private void setOnClickListeners() {
@@ -221,7 +224,7 @@ public class Fragment_FlashCard extends Fragment implements View.OnClickListener
                 sb = new StringBuilder();
                 currentEntry = sb.toString();
                 txtAnswer.setText(sb.toString());
-                break; 
+                break;
             case R.id.btnSubmit:
                 if(calculateAnswer()){
                     right += 1;
@@ -259,21 +262,6 @@ public class Fragment_FlashCard extends Fragment implements View.OnClickListener
                 break;
         }
         return false;
-    }
-
-    private void clearImages() {
-        card1.setImageResource(-1);
-        card2.setImageResource(-1);
-        functionType.setImageResource(-1);
-    }
-
-
-
-    @Override
-    public View makeView() {
-        ImageView myView = new ImageView(getActivity().getApplicationContext());
-        myView.setScaleType(ImageView.ScaleType.FIT_CENTER);
-        return myView;
     }
 
 }

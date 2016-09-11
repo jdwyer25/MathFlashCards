@@ -52,7 +52,6 @@
         android:background="@drawable/buttons_main_screen_green"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:visibility="gone"
         android:text="@string/division"/>
 
 </RelativeLayout>

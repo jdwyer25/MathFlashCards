@@ -22,8 +22,8 @@ public class MainActivity extends FragmentActivity {
         MobileAds.initialize(getApplicationContext(), "ca-app-pub-0959410565463062~3421628515");
 
         AdView mAdView = (AdView) findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().addTestDevice("990D881316626793E9B06C55C545B512").build();
-        //AdRequest adRequest = new AdRequest.Builder().build();
+        //AdRequest adRequest = new AdRequest.Builder().addTestDevice("990D881316626793E9B06C55C545B512").build();
+        AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
 
     }
@@ -41,7 +41,7 @@ public class MainActivity extends FragmentActivity {
                 Uri uri = Uri.parse("market://details?id=" + getPackageName());
                 Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
                 // To count with Play market backstack, After pressing back button,
-                // to taken back to our application, we need to add following flags to intent.
+                // to taken back to our application, we need to symbol_plus following flags to intent.
                 goToMarket.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY |
                         Intent.FLAG_ACTIVITY_NEW_DOCUMENT |
                         Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
